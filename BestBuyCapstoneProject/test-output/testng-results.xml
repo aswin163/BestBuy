@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-08T13:44:39 IST" name="Suite" finished-at="2024-03-08T13:45:17 IST" duration-ms="37912">
+    <groups>
+    </groups>
+    <test started-at="2024-03-08T13:44:39 IST" name="Test" finished-at="2024-03-08T13:45:17 IST" duration-ms="37912">
+      <class name="testcases.TC006_ShopByBrandTest">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.TC006_ShopByBrandTest@52bf72b5]" started-at="2024-03-08T13:44:39 IST" name="launchBrowser" finished-at="2024-03-08T13:44:42 IST" duration-ms="3019" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.bestbuy.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="ShopByBrandTest()[pri:0, instance:testcases.TC006_ShopByBrandTest@52bf72b5]" started-at="2024-03-08T13:44:42 IST" name="ShopByBrandTest" finished-at="2024-03-08T13:45:17 IST" duration-ms="34865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShopByBrandTest -->
+      </class> <!-- testcases.TC006_ShopByBrandTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
