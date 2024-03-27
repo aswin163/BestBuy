@@ -1,9 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import base.ProjectSpecifications;
 
@@ -26,6 +28,9 @@ public class SignUpPage extends ProjectSpecifications {
 	
 	@FindBy(id = "phone")
 	WebElement mobilenumber;
+	
+	@FindBy(xpath = "//button[text()='Create an Account']")
+	WebElement submit;
 	
 	public SignUpPage(WebDriver driver) {
 		driver = this.driver;
@@ -52,6 +57,13 @@ public class SignUpPage extends ProjectSpecifications {
 	public SignUpPage phone(String mnumber) {
 		sendkeys(mobilenumber, mnumber);
 		return this;
+	}
+	
+	public void submit(String fname) {
+		click(submit);
+		String expected = driver.findElement(By.xpath("//span[@class='v-p-right-xxs line-clamp']")).getText();
+		String actual = "Hi, "+fname+"";
+		Assert.assertEquals(expected, actual);
 	}
 
 }

@@ -13,7 +13,7 @@ public class TC006_ShopByBrandTest extends ProjectSpecifications {
 		
 		HomePage obj = new HomePage(driver);
 		obj.ShopbyBrand().selectitem();
-		obj.addToCart();
+		obj.addToCart().addToCartAssertion();
 
 	}
 

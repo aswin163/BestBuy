@@ -17,10 +17,10 @@ public class TC002_LoginTest extends ProjectSpecifications {
 
 	
 	@Test(dataProvider = "readExcel")
-	public void LoginTest(String email, String password) {
+	public void LoginTest(String email, String password, String firstname) {
 		
 		HomePage obj = new HomePage(driver);
-		obj.login().email(email).password(password).submit();
+		obj.login().email(email).password(password).submit(firstname);
 
 	}
 

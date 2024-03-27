@@ -16,7 +16,7 @@ public class SearchAndAddToCart extends ProjectSpecifications{
 	@FindBy(className = "header-search-button")
 	WebElement searchbutton;
 	
-	@FindBy(xpath = "(//button[text()='Add to Cart'])[1]")
+	@FindBy(xpath = "(//button[text()='Add to Cart'])[4]")
 	WebElement addtocart;
 	
 	public SearchAndAddToCart(WebDriver driver) {
@@ -27,7 +27,7 @@ public class SearchAndAddToCart extends ProjectSpecifications{
 	public SearchAndAddToCart search(String searchtext) {
 		sendkeys(searchbar, searchtext);
 		click(searchbutton);
-		driver.findElement(By.xpath("(//a[text()='Samsung - Galaxy S23 128GB (Unlocked) - Phantom Black'])[1]")).click();
+		driver.findElement(By.xpath("//a[text()='Samsung - Geek Squad Certified Refurbished Galaxy S23 Ultra 256GB (Unlocked) - Green']")).click();
 		return this;
 	}
 

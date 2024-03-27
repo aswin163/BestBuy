@@ -1,18 +1,24 @@
 package utility;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+
+import com.aventstack.extentreports.ExtentTest;
 
 public class Utilities {
 	
@@ -75,5 +81,22 @@ public class Utilities {
 		book.close();
 		return data;
 	}
+	
+		public String getScreenshot(String test) throws IOException {
+		
+		int ranNum = (int) (Math.random() * 9999999 + 1000000);
+		
+		String path = "E:\\JAT-Guvi\\BestBuyCapstoneProject\\ScreenShot\\"+test+ranNum+".png";
+		TakesScreenshot screenshot = ((TakesScreenshot) driver);
+		File source = screenshot.getScreenshotAs(OutputType.FILE);
+		File dest = new File(path);
+		FileUtils.copyFile(source, dest);
+		
+		return path;
+	}
+		
+		public void closeBrowser() {
+			driver.close();
+		}
 
 }

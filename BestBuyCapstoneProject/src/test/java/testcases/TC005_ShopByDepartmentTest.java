@@ -13,7 +13,7 @@ public class TC005_ShopByDepartmentTest extends ProjectSpecifications {
 		
 		HomePage obj = new HomePage(driver);
 		obj.shopbydepartment().shopbydept().selectitem();
-		obj.addToCart();
+		obj.addToCart().addToCartAssertion();
 
 	}
 

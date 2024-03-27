@@ -18,7 +18,7 @@ public class TC001_SignUpTest extends ProjectSpecifications {
 	public void SignUpTest(String fname, String lname, String email, String password, String phonenumber) {
 		
 		HomePage obj = new HomePage(driver);
-		obj.signup().firstname(fname).lastname(lname).email(email).password(password).phone(phonenumber);
+		obj.signup().firstname(fname).lastname(lname).email(email).password(password).phone(phonenumber).submit(fname);
 
 	}
 

@@ -30,7 +30,7 @@ public class ShopByDepartment extends ProjectSpecifications {
 	}
 	
 	public ShopByDepartment selectitem() {
-		driver.findElement(By.xpath("//a[text()='Samsung - 77” Class S89C OLED 4K UHD Smart Tizen TV']")).click();	
+		driver.findElement(By.xpath("//a[text()='Samsung - 75” Class CU7000 Crystal UHD 4K Smart Tizen TV']")).click();	
 		return this;
 	}
 
